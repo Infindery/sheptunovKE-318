@@ -1,0 +1,96 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #FCFCFC;
+}
+
+.header {
+	width: 100vw;
+	height: 50px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 7px 7px 0 rgba(0, 0, 0, 0.09), 0 16px 10px 0 rgba(0, 0, 0, 0.05), 0 29px 11px 0 rgba(0, 0, 0, 0.01), 0 45px 13px 0 rgba(0, 0, 0, 0);
+
+	display: flex;
+	justify-content: center;
+}
+
+.headerLogo {
+	font-size: 32px;
+	font-weight: 900;
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	width: 1360px;
+	height: 50px;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.firstBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.subtitle {
+	font-size: 18px;
+	text-align: center;
+
+	margin-bottom: 30px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.errors {
+	height: 30px;
+	color: rgb(235, 111, 111);
+}
+
+.text {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.btn {
+	padding: 5px 10px;
+}
+
+.link {
+    margin-top: 25px;
+    display: none;
+}

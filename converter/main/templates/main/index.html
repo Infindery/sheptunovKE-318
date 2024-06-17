@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+	<title>Загрузить файл</title>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<!-- <img src="{% static 'main/images/header_logo.svg' %}" alt="logo" class="headerLogo"> -->
+			<span class="headerLogo">PDF</span>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="container">
+			<div class="firstBlock">
+				<p class="title">Загрузка файла</p>
+				<p class="subtitle">Выберите файл docx, который необходимо преобразовать в pdf формат</p>
+				<form action="{% url 'index' %}" method="post" enctype="multipart/form-data" class="form">
+					{% csrf_token %}
+					<p class="errors">{{ error }}</p>
+					<p class="text">{{ form.file }}</p>
+			
+					<button type="submit" class="btn" onclick="showFile()">Преобразовать</button>
+				</form>
+				<a href="/" class="link">На главную</a>
+			</div>
+		</div>
+	</main>
+
+	<script src="{% static 'main/js/main.js' %}"></script>
+</body>
+</html>
